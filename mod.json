@@ -1,0 +1,13 @@
+{
+	"geode": "3.4.0",
+	"gd": {
+		"win": "2.206",
+		"android": "2.206",
+		"mac": "2.206"
+	},
+	"version": "v1.0.0",
+	"id": "fig.authentication",
+	"name": "GDAuth",
+	"developer": "fig",
+	"description": "Provides reliable authentication for GD Accounts"
+}
