@@ -5,9 +5,14 @@
 		"android": "2.206",
 		"mac": "2.206"
 	},
-	"version": "v1.0.0",
+	"version": "v1.0.1",
 	"id": "fig.authentication",
 	"name": "GDAuth",
 	"developer": "fig",
-	"description": "Provides reliable authentication for GD Accounts"
+	"description": "Provides reliable authentication for GD Accounts",
+	"api": {
+		"include": [
+			"include/*.hpp"
+		]
+	}
 }
