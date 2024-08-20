@@ -14,5 +14,6 @@
 		"include": [
 			"include/*.hpp"
 		]
-	}
+	},
+	"repository": "https://github.com/figmentboy/gdauth"
 }
