@@ -19,11 +19,11 @@ void AuthenticationManager::getAuthenticationToken(std::function<void(std::strin
 
     m_listener.bind([this, onSuccess, onFailure](web::WebTask::Event* e) {
         if (web::WebResponse* value = e->getValue()) {
-            if (value->string().unwrapOr("-1") == "-1") {
+            if (value->string().unwrapOr("-1") == "-1" || value->json().isErr()) {
                 return onFailure("Authentication Failed");
             }
 
-            m_token = value->json().unwrap().get<std::string>("sessionID");
+            m_token = value->json().unwrap().get<std::string>("sessionID").unwrapOr("");
             onSuccess(m_token);
         } else if (web::WebProgress* progress = e->getProgress()) {
             // The request is still in progress...
